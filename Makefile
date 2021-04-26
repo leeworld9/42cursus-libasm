@@ -11,7 +11,7 @@
 # **************************************************************************** #
 
 ASM = nasm -f
-ASM_OUTPUT_FORMAT = elf64
+ASM_OUTPUT_FORMAT = macho64
 # MacOS format : macho64
 # Linux format : elf64
 
