@@ -9,7 +9,7 @@ On Linux, unlike Mac, it works with the same function name
 as the function name in assembly language.
 */
 
-size_t ft_strlen(char *str);
+size_t	ft_strlen(char *str);
 char	*ft_strcpy(char *dst, char const *src);
 int		ft_strcmp(const char* str1, const char* str2);
 ssize_t ft_write(int fildes, void *buf, size_t nbyte);
@@ -18,6 +18,8 @@ char	*ft_strdup(const char *s);
 
 int main()
 {
+	////////////////////////////////////////////////////////////////////////////////
+
 	char *chr1 = "test char";
 	char *chr2 = "";
 	char *chr3 = NULL;
@@ -42,6 +44,7 @@ int main()
 	chr5 = (char *)malloc(sizeof(char) * (ft_strlen(chr4) + 1));
 	printf("ft_strcpy\t -> chr4 : %s, chr5 : %s\n", chr4, ft_strcpy(chr5, chr4));
 	free(chr5);
+
 	////////////////////////////////////////////////////////////////////////////////
 
 	char *chr6 = "test1";
@@ -59,10 +62,12 @@ int main()
 
 	////////////////////////////////////////////////////////////////////////////////
 
-	//read, write : mac에서 테스트 해야함
+	char *chr10 = "dup_test";
+	printf("strdup\t\t : %s\n", strdup(chr10));
+	printf("ft_strdup\t : %s\n", ft_strdup(chr10));
 
 	////////////////////////////////////////////////////////////////////////////////
 
-	printf("strdup\t\t : %s\n", strdup(chr9));
-	printf("ft_strdup\t : %s\n", ft_strdup(chr9));
+	//read, write : Test Skip
+
 }
